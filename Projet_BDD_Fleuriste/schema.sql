@@ -22,7 +22,8 @@ CREATE TABLE IF NOT EXISTS commande (
     etat_commande varchar(250) NOT NULL,
     id_client int(11) NOT NULL,
     id_magasin int(11) NOT NULL,
-    PRIMARY KEY (id_commande)
+    PRIMARY KEY (id_commande),
+    FOREIGN KEY (id_client) REFERENCES client(id_client),
     ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 DROP TABLE IF EXISTS produit;
